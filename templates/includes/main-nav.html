@@ -22,22 +22,22 @@
           JBJ Boutique  <i class="fas fa-caret-down"></i>
         </a>
         <div class="dropdown-menu border-0" aria-labelledby="shop-link">
-          <a href="" class="dropdown-item"
+          <a href="{% url 'products' %}?category=apparel" class="dropdown-item"
             >Apparel</a
           >
           <a
-            href=""
+            href="{% url 'products' %}?category=accessories"
             class="dropdown-item"
             >Accessories</a
           >
-          <a href="" class="dropdown-item"
+          <a href="{% url 'products' %}?category=media" class="dropdown-item"
             >Media</a
           >
-          <a href="" class="dropdown-item"
+          <a href="{% url 'products' %}?category=jbjxp" class="dropdown-item"
             >JBJ Experience</a
           >          
           <a
-            href=""
+            href="{% url 'products' %}?category=apparel,accessories,media"
             class="dropdown-item"
             >Shop All</a
           > 
