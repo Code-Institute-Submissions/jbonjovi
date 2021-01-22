@@ -92,6 +92,28 @@ input.form-control.border.border-black.rounded-0.search-form[type="text"]:focus 
     bottom: 10px;
 }
 
+/* cards articles */
+.card.card-bj2020 {
+    margin-top: 30px;
+    border: none;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.card.mb-3 {
+    border: none;
+    margin-top: 10px;
+}
+
+.card.cards-article {
+    border: none;
+}
+
+.card.h-100.border-0 {
+    background-color: white;
+}
+
+
 /* delivery banner */
 div#delivery-banner {
     margin-bottom: 20px;
@@ -193,4 +215,6 @@ div#delivery-banner {
     margin-bottom: 10px;
     height: 16vh;
 }
+
+
 }
