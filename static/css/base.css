@@ -84,7 +84,6 @@ input.form-control.border.border-black.rounded-0.search-form[type="text"]:focus 
     border-radius: 0.3rem;
 }
 
-
 /* bootstrap toasts */
 .message-container {
     position: fixed;
@@ -101,7 +100,6 @@ input.form-control.border.border-black.rounded-0.search-form[type="text"]:focus 
     height: 2px;
 }
 
-
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0;
@@ -113,7 +111,6 @@ input.form-control.border.border-black.rounded-0.search-form[type="text"]:focus 
     top: -10px;
     right: 36px;
 }
-
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
@@ -163,6 +160,20 @@ input.form-control.border.border-black.rounded-0.search-form[type="text"]:focus 
     bottom: 10px;
 }
 
+/* tours section */
+.container-fluid.tour-img {
+
+    padding-right: 0;
+    padding-left: 0;
+
+}
+p.cancelledtour {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5px;
+}
+
 /* cards articles */
 .card.card-bj2020 {
     margin-top: 30px;
@@ -184,6 +195,11 @@ input.form-control.border.border-black.rounded-0.search-form[type="text"]:focus 
     background-color: white;
 }
 
+a.music-link.btn-white.btn-lg.rounded-0.text-uppercase {
+    background-color: #a82a28;
+    text-decoration: none;
+    margin-left: 30%;
+}
 
 /* delivery banner */
 div#delivery-banner {
@@ -192,6 +208,16 @@ div#delivery-banner {
 
 .bg-white {
     background-color: #e3dcca;
+}
+
+/* Table bag content */
+.table-header {
+    text-align: center;
+}
+
+h2.mb-4.shoppingbag-text {
+    color: #e63b3b;
+    margin-top: 20px;
 }
 
 /* Buttons */
@@ -237,6 +263,207 @@ div#delivery-banner {
     z-index: -1;
     background-color: white;
 }
+
+.overlay-login{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+    background-color: #403e3e;
+}
+
+/* arrows scroll-up */
+.arrow-up-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+i.fas.fa-arrow-up.mx-auto.my-auto {
+    color: #9f9b9d;
+}
+
+.arrow-up-link {
+    cursor: pointer;
+}
+
+.pdt-detail-row {
+    background-color: white;
+}
+/* update/delete cursor in shopping bag */
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+/* The flip card container */
+.card-deck .card-deck-flipcard {
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+.flip-card {
+    background-color: white;
+    width: 480px;
+    height: 480px;
+    border: none;
+    perspective: 1000px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipcard-img{
+    width: 480px;
+    height: 480px;
+}
+
+h5.track-list {
+    margin-left: 5px;
+}
+
+.track-list{
+    font-size: 13px;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+/* Product Form */
+.row.search-box {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+.cancelledtour{
+    text-transform: uppercase;
+}
+
+/*--------------------------------- Checkout-success*/
+.text-checkout {
+    color: #5b5b5a;
+}
+
+/*--------------------------------- Bag empty */
+a.btn.btn-outline-white.btn-white.rounded-0.btn-lg.bag-empty {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+/* Allauth form formatting */
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for="id_remember"]) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type="submit"] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type="submit"]:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+    color: #e73d3e; /* text-info */
+    text-decoration: none;
+}
+
+a.btn.btn-light.allauth-a-light {
+    color: black;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -276,6 +503,17 @@ div#delivery-banner {
         margin-bottom: 0;
     }
 
+    .flip-card {
+    width: 355px;
+    height: 355px;
+    margin-left: 0;
+    margin-right: 0;
+}
+    .flipcard-img{
+    width: 355px;
+    height: 355px;
+}
+
     .row.search-box {
     margin-top: 5px;
 }
@@ -286,6 +524,5 @@ div#delivery-banner {
     margin-bottom: 10px;
     height: 16vh;
 }
-
 
 }
