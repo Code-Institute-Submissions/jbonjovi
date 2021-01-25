@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -17,8 +18,10 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                <hr>
                 <h2 class="logo-font mb-4">Thank You</h2>
-                <p class="text-black">Please find your order summary below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                <hr>
+                <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
 
@@ -27,13 +30,13 @@
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
                         <div class="col">
-                            <small class="text-muted">Order Summary:</small>
+                            <small class="text-muted">Order Info:</small>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">Order Number</p>
+                            <p class="mb-0 text-black font-weight-bold">Order Number</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.order_number }}</p>
@@ -42,7 +45,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">Order Date</p>
+                            <p class="mb-0 text-black font-weight-bold">Order Date</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.date }}</p>
@@ -58,7 +61,7 @@
                     {% for item in order.lineitems.all %}
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="small mb-0 font-weight-bold text-checkout">
+                            <p class="small mb-0 text-black font-weight-bold">
                                 {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
                             </p>
                         </div>
@@ -76,7 +79,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">Full Name</p>
+                            <p class="mb-0 text-black font-weight-bold">Full Name</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.full_name }}</p>
@@ -85,7 +88,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">Address 1</p>
+                            <p class="mb-0 text-black font-weight-bold">Address 1</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.street_address1 }}</p>
@@ -95,7 +98,7 @@
                     {% if order.street_address2 %}
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout text-checkout">Address 2</p>
+                            <p class="mb-0 text-black font-weight-bold">Address 2</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.street_address1 }}</p>
@@ -106,7 +109,7 @@
                     {% if order.county %}
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">County</p>
+                            <p class="mb-0 text-black font-weight-bold">County</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.county }}</p>
@@ -116,7 +119,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">Town or City</p>
+                            <p class="mb-0 text-black font-weight-bold">Town or City</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.town_or_city }}</p>
@@ -126,7 +129,7 @@
                     {% if order.postcode %}
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">Postal Code</p>
+                            <p class="mb-0 text-black font-weight-bold">Postal Code</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.postcode }}</p>
@@ -136,7 +139,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">Country</p>
+                            <p class="mb-0 text-black font-weight-bold">Country</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.country }}</p>
@@ -145,7 +148,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">Phone Number</p>
+                            <p class="mb-0 text-black font-weight-bold">Phone Number</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.phone_number }}</p>
@@ -160,7 +163,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">Order Total</p>
+                            <p class="mb-0 text-black font-weight-bold">Order Total</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.order_total }}</p>
@@ -169,7 +172,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">Delivery</p>
+                            <p class="mb-0 text-black font-weight-bold">Delivery</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.delivery_cost }}</p>
@@ -178,7 +181,7 @@
 
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold text-checkout">Grand Total</p>
+                            <p class="mb-0 text-black font-weight-bold">Grand Total</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.grand_total }}</p>
@@ -188,23 +191,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-7 text-right">
-                {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
-                        <span class="icon mr-2">
-                            <i class="fas fa-angle-left"></i>
-                        </span>
-                        <span class="text-uppercase">Back to Profile</span>
-                    </a>
-                {% else %}
-                    <a href="{% url 'home' %}" class="btn btn-white rounded-0 my-2">
-                        <span class="icon mr-2">
-                            <i class="fas fa-gifts"></i>
-                        </span>
-                        <span class="text-uppercase">Back to the Homepage</span>
-                    </a>
-                {% endif %}
-            </div>
-        </div>
+			<div class="col-12 col-lg-7 text-right">
+				<a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-black rounded-0 my-2">
+					<span class="icon mr-2">
+						<i class="fas fa-gifts"></i>
+					</span>
+					<span class="text-uppercase">Now check out the latest deals!</span>
+				</a>
+			</div>
+		</div>
     </div>
 {% endblock %}
