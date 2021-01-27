@@ -29,18 +29,22 @@
                 <div class="d-block d-md-none">
                     <div class="row">
                         <div class="col">
+                            {% include "bag/bag-total.html" %}
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
+                            {% include "bag/checkout-buttons.html" %}
                             <p class="text-muted mb-5">A summary of your bag contents is below</p>
                         </div>
                     </div>
                     {% for item in bag_items %}
                         <div class="row">
                             <div class="col-12 col-sm-6 mb-2">
+                                {% include "bag/product-image.html" %}
                             </div>
                             <div class="col-12 col-sm-6 mb-2">
+                                {% include "bag/product-info.html" %}
                             </div>
                             <div class="col-12 col-sm-6 order-sm-last">
                                 <p class="my-0">Price Each: ${{ item.product.price }}</p>
@@ -49,6 +53,7 @@
                                     </strong>${{ item.product.price | calc_subtotal:item.quantity }}</p>
                             </div>
                             <div class="col-12 col-sm-6">
+                                {% include "bag/quantity-form.html" %}
                             </div>
                         </div>
                         <div class="row">
@@ -131,7 +136,7 @@
                                                 <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">
                                                     <small>Delete</small>
                                                 </a>
-                                            </td>                                            
+                                            </td>
                                             <td class="py-5 text-center">
                                                 <p class="my-0">
                                                     ${{ item.product.price | calc_subtotal:item.quantity }}
