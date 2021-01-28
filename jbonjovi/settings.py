@@ -103,6 +103,8 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
+SITE_ID = 1
+
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -110,7 +112,6 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = 'accounts/login/'
 LOGIN_REDIRECT_URL = '/'
-SITE_ID = 1
 
 WSGI_APPLICATION = 'jbonjovi.wsgi.application'
 
@@ -121,7 +122,7 @@ WSGI_APPLICATION = 'jbonjovi.wsgi.application'
 if 'DATABASE_URL' in os.environ:
     DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 else:
-    DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3',
+    DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 
                              'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),}}
 
 # Password validation
@@ -141,7 +142,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
