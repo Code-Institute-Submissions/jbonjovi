@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
     'home',
     'products',
     'bag',
@@ -66,6 +67,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+SOCIALACCOUNT_PROVIDERS = {'facebook': {'METHOD': 'oauth2',
+                                        'SCOPE': ['email'],
+                                        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+                                        'LOCALE_FUNC': lambda request: 'en_US',
+                                        'VERSION': 'v2.4'
+                                        }
+                           }
 
 ROOT_URLCONF = 'jbonjovi.urls'
 
