@@ -308,35 +308,14 @@ i.fas.fa-arrow-up.mx-auto.my-auto {
     cursor: pointer;
 }
 
-/* The flip card container */
-.card-deck .card-deck-flipcard {
-  margin-left: 20px;
-  margin-bottom: 50px;
+/* Card deck */
+.allcarddecks {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.flip-card {
-    background-color: white;
-    width: 480px;
-    height: 480px;
-    border: none;
-    perspective: 1000px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: left;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.flipcard-img{
-    width: 480px;
-    height: 480px;
+.card-deck{
+    margin-bottom: 10px;
 }
 
 h5.track-list {
@@ -345,24 +324,6 @@ h5.track-list {
 
 .track-list{
     font-size: 13px;
-}
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-}
-
-.flip-card-back {
-    background-color: white;
-    color: black;
-    transform: rotateY(180deg);
 }
 
 /* Product Form */
