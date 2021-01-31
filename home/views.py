@@ -11,9 +11,9 @@ def bjcards(request):
     return render(request, 'home/bjcards.html')
 
 
-def music(request):
-    return render(request, 'home/music.html')
+def bonjovi(request):
+    return render(request, 'home/bonjovi.html')
 
 
-def tours(request):
-    return render(request, 'home/tours.html')
+def contact(request):
+    return render(request, 'home/contact.html')
