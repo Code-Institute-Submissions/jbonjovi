@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url("https://cdncozycig.addons.business/10626/cig-cozy-gallery-3907jOq-20180408_Bon_Jovi_Newark_1299-xxl.jpeg?c=13") no-repeat center center fixed;
+    background: url("https://cdncozygalleryp.addons.business/10626/cig-cozy-gallery-3907Hyz-AU0A0737-2-xxl.jpg?c=10") no-repeat center center fixed;
     background-size: cover;
     padding-top: 20%;
     height: calc(100vh - 164px);
@@ -471,15 +471,9 @@ a.btn.btn-light.allauth-a-light {
         margin-bottom: 0;
     }
 
-    .flip-card {
-    width: 355px;
-    height: 355px;
-    margin-left: 0;
-    margin-right: 0;
-}
-    .flipcard-img{
-    width: 355px;
-    height: 355px;
+    .card-deck {
+    display: inline-block;
+    margin: 0 auto;
 }
 
     .row.search-box {
