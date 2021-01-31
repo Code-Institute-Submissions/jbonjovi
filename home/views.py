@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
 
 # Create your views here.
 
@@ -16,4 +17,20 @@ def bonjovi(request):
 
 
 def contact(request):
-    return render(request, 'home/contact.html')
+    if request.method == 'POST':
+        message_name = request.POST['message-name']
+        message_mail = request.POST['message-mail']
+        message = request.POST['message']
+
+        # to send a mail
+        send_mail(
+            'This message is from' + message_name,  # this is the subject
+            message,  # the message
+            message_mail,  # the from email
+            ['jihane.azim@gmail.com']  # the To email
+        )
+
+        return render(request, 'home/contact.html',
+                      {'message_name': message_name})
+    else:
+        return render(request, 'home/contact.html', {})

@@ -201,6 +201,13 @@ a.music-link.btn-white.btn-lg.rounded-0.text-uppercase {
     margin-left: 30%;
 }
 
+/* contact page */
+
+.form-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 /* delivery banner */
 div#delivery-banner {
     margin-bottom: 20px;

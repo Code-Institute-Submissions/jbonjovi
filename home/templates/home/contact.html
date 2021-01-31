@@ -1,13 +1,46 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block page_header %}
-<div class="container header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
-</div>
-{% endblock %} 
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 {% block content %}
-<div class="overlay"></div>
-
+    <div class="overlay"></div>
+    {% if message_name %}
+        <div class="center-align">
+            <h2>Thanks for getting in touch
+                {{ message_name }}!</h2>
+            <p>
+                We have received your mail and will respond as fast as we can</p>
+        </div>
+    {% else %}
+        <div class="container">
+            <div class="col-6 col-md-8 offset-2">
+                <div class="contact-form">
+                    <div class="section-heading">
+                        <h4>Get in touch
+                            {{ message_name }}</h4>
+                    </div>
+                    <form action="{% url 'contact' %}" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control mb-30" placeholder="Enter your name" name="message-name"></div>
+                                <div class="col-lg-6">
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Email" name="message-mail"></div>
+                                    <div class="col-12 form-text">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="Your message"></textarea>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="findout-button btn-white btn-lg rounded-0 text-uppercase py-2">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    {% endif %}
 {% endblock %}
