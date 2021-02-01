@@ -9,11 +9,20 @@
 {% endblock %}
 {% block content %}
     <div class="overlay"></div>
-    <h1>Blog Post</h1>
+    <h1>NEWS -- Blog posts</h1>
     <ul>
     {% for post in object_list %}
         <li><a href="{% url 'post_details' post.pk%}">{{ post.title }} - {{ post.author }}</a>
             <br>
+    {% if post.image %}
+            <a href="{% url 'post_details' post.pk %}">
+                <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.name }}"/>
+            </a>
+    {% else %}
+            <a href="">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.name }}"/>
+            </a>
+    {% endif %}
             {{ post.body }}
         </li>
     {% endfor %}

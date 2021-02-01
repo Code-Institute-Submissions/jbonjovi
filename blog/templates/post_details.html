@@ -8,12 +8,37 @@
     </div>
 {% endblock %}
 {% block content %}
-    <div class="overlay"></div>
-    <h1>{{ post.title }}</h1>
-    <small>By {{ post.author }}</small>
-    <hr>
-    <h3>{{ post.name }}</h3>
-    {{ post.body }}
-
-    <a href="{% url 'blog' %}">Back to Blog</a>
-    {% endblock %}
+<div class="overlay"></div>
+    <!-- Page Content -->
+<div class="container">
+<div class="row">
+    <div class="col-lg-8">
+        <h1 class="mt-4">{{ post.name }}</h1>
+        <p class="lead">By {{ post.author }}</p>
+        <hr>
+        <p>Posted on January 1, 2019 at 12:00 PM</p>
+        <hr>
+        {% if post.image %}
+        <a href="{{ post.image.url }}">
+          <img
+            class="card-img-top img-fluid"
+            src="{{ post.image.url }}"
+            alt="{{ post.name }}"
+          />
+        </a>
+        {% else %}
+        <a href="">
+          <img
+            class="card-img-top img-fluid"
+            src="{{ MEDIA_URL }}noimage.png"
+            alt="{{ post.name }}"
+          />
+        </a>
+        {% endif %}
+        <hr>
+        <p class="lead">{{ post.body }}</p>
+    </div>
+</div>
+</div>
+<a href="{% url 'blog' %}">News</a>
+{% endblock %}
