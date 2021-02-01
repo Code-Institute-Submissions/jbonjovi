@@ -450,12 +450,7 @@ a.btn.btn-light.allauth-a-light {
         left: 0;
         z-index: 1030;
     }
-    
-    .card-deck {
-    display: inline-block;
-    margin: 0 auto;
-}
-}
+    }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media(max-width: 991px) {
