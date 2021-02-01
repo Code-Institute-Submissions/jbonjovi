@@ -9,13 +9,11 @@
 {% endblock %}
 {% block content %}
     <div class="overlay"></div>
-    <h1>Blog Post</h1>
-    <ul>
-    {% for post in object_list %}
-        <li><a href="{% url 'post_details' post.pk%}">{{ post.title }} - {{ post.author }}</a>
-            <br>
-            {{ post.body }}
-        </li>
-    {% endfor %}
-    </ul>
+    <h1>{{ post.title }}</h1>
+    <small>By {{ post.author }}</small>
+    <hr>
+    <h3>{{ post.name }}</h3>
+    {{ post.body }}
+
+    <a href="{% url 'blog' %}">Back to Blog</a>
     {% endblock %}

@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from blog.models import Post
 
 # Create your views here.
@@ -7,3 +7,8 @@ from blog.models import Post
 class BlogView(ListView):
     model = Post
     template_name = 'blog.html'
+
+
+class PostDetails(DetailView):
+    model = Post
+    template_name = 'post_details.html'
