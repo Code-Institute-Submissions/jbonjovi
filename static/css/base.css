@@ -500,7 +500,23 @@ select option[value=""] {
     height: 100%;
 }
 
+/* -------------------------------- Blog */
+a.post-title {
+    color: black;
+    text-decoration: none;
+}
 
+a.post-title:hover{
+    color:#e3dcca;
+}
+
+.post-details-container, .blog-container{
+    padding-bottom: 15px;
+}
+
+.blog-btn {
+    margin-bottom: 10px;
+}
 
 /* -------------------------------- Media Queries */
 
