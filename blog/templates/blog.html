@@ -12,7 +12,8 @@
     <h1>NEWS -- Blog posts</h1>
     <ul>
     {% for post in object_list %}
-        <li><a href="{% url 'post_details' post.pk%}">{{ post.title }} - {{ post.author }}</a>
+        <li>
+            <a href="{% url 'post_details' post.pk%}">{{ post.title }} - {{ post.author }}</a>
             <br>
     {% if post.image %}
             <a href="{% url 'post_details' post.pk %}">
