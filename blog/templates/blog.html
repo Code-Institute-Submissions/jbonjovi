@@ -32,7 +32,7 @@
                                 <small class="ml-3">
                                     <a href="{% url 'edit_post' post.pk %}">Edit the Post</a>
                                     |
-                                    <a class="text-danger" href="">Delete</a>
+                                    <a class="text-danger" href="{% url 'delete_post' post.pk %}">Delete</a>
                                 </small>
                             {% endif %}
                         </div>

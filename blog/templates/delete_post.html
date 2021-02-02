@@ -15,21 +15,20 @@
             <div class="col-12 col-md-6">
                 <hr>
                     <h2 class="logo-font mb-4">Blog Management</h2>
-                    <h5 class="text-muted">Add a Post</h5>
-                    <hr></div>
+                    <h5 class="text-muted">Delete a Post</h5>
+                    <hr>
+                    <h4 class="">You are about to delete: {{ post.title }}</h4>
+                </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <div class="from-group">
-                        <form method="POST" action="{% url 'add_post' %}" class="form mb-2" enctype="multipart/form-data">
+                        <form method="POST" action="{% url 'delete_post' post.pk %}" class="form mb-2" enctype="multipart/form-data">
                             {% csrf_token %}
-                            {{ form.as_p }}
                             <div class="text-right">
                                 <a class="btn btn-outline-black rounded-0" href="{% url 'blog' %}">Cancel</a>
-                                <button class="btn btn-white rounded-0" type="submit">Add a Post</button>
+                                <button class="btn btn-white rounded-0" type="submit">Delete the Post</button>
                             </div>
                         </form>
-                        </div>
                     </div>
                 </div>
             </div>
