@@ -3,6 +3,8 @@ from blog.models import Post
 
 from django.urls import reverse_lazy
 
+from .forms import PostForm
+
 
 # Create your views here.
 
@@ -19,14 +21,14 @@ class PostDetails(DetailView):
 
 class AddPost(CreateView):
     model = Post
+    form_class = PostForm
     template_name = 'add_post.html'
-    fields = '__all__'
 
 
 class EditPost(UpdateView):
     model = Post
+    form_class = PostForm
     template_name = 'edit_post.html'
-    fields = ['title', 'body', 'image', 'image_url']
 
 
 class DeletePost(DeleteView):

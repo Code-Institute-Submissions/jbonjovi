@@ -47,6 +47,10 @@ i.fas.fa-chevron-left:hover {
     color: #e63b3d;
 }
 
+i.fas.fa-blog.nav-icon.text-blog .icon-caroussel{
+    font-size: 40px;
+}
+
 /* Search form */
 .search-form {
     background-color: transparent;
@@ -164,12 +168,21 @@ input.form-control.border.border-black.rounded-0.search-form[type="text"]:focus 
     bottom: 10px;
 }
 
-.bandcarrousel-textcolor {
+.bandcarrousel-textcolor, .addapost-heading, .btn-blog {
     color: #e73c3d;
 }
 
-.btn-blog{
-    color: #e73c3d;
+.card.blog-cards {
+    margin-bottom: 10px;
+}
+
+.addapost-heading{
+    margin-bottom: 20px;
+}
+
+.addapost-heading:hover{
+    text-decoration: none;
+    color: black;
 }
 
 /* tours section */
