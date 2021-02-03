@@ -1,5 +1,5 @@
 from django import forms
-from .widgets import CustomClearableFileInput
+from .widgets import CustomClearableFileInput2
 from .models import Post
 
 
@@ -17,4 +17,4 @@ class PostForm(forms.ModelForm):
 
         image = forms.ImageField(label='Image',
                                  required=False,
-                                 widget=CustomClearableFileInput)
+                                 widget=CustomClearableFileInput2)

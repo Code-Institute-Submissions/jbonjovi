@@ -168,7 +168,7 @@ input.form-control.border.border-black.rounded-0.search-form[type="text"]:focus 
     bottom: 10px;
 }
 
-.bandcarrousel-textcolor, .addapost-heading, .btn-blog {
+.bandcarrousel-textcolor, .addapost-heading {
     color: #e73c3d;
 }
 
@@ -187,7 +187,6 @@ input.form-control.border.border-black.rounded-0.search-form[type="text"]:focus 
 
 /* tours section */
 .container-fluid.tour-img {
-
     padding-right: 0;
     padding-left: 0;
 
@@ -227,7 +226,6 @@ a.music-link.btn-white.btn-lg.rounded-0.text-uppercase {
 }
 
 /* contact page */
-
 .contactform-text {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -383,8 +381,8 @@ h5.track-list {
     border-radius: 0;
 }
 
-.cancelledtour{
-    text-transform: uppercase;
+.btn-blog, span.btn.btn-red.rounded-0.btn-file{
+    background-color: #dc3545 ;
 }
 
 /*--------------------------------- Checkout-success*/
