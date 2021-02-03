@@ -43,6 +43,10 @@ i.fas.fa-chevron-left:hover {
     color: white;
 }
 
+.text-blog {
+    color: #e63b3d;
+}
+
 /* Search form */
 .search-form {
     background-color: transparent;
@@ -158,6 +162,14 @@ input.form-control.border.border-black.rounded-0.search-form[type="text"]:focus 
 
 .carousel-caption {
     bottom: 10px;
+}
+
+.bandcarrousel-textcolor {
+    color: #e73c3d;
+}
+
+.btn-blog{
+    color: #e73c3d;
 }
 
 /* tours section */
@@ -556,6 +568,8 @@ a.post-title:hover{
     .carousel-caption.top-caption {
         margin-bottom: 0;
     }
+
+    
 
     .card-deck {
     display: inline-block;
