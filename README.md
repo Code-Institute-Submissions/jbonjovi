@@ -208,6 +208,8 @@ settings.py: the line too long 'problem' can't be resolved as when I did it brok
 the Product has no object member error from pylint is also to be ignore
 
 # Bugs
+Once the debug was set to development, when I run the server on github no static file was taking into consideration sohad to run the server on mode insecure:
+manage.py runserver --insecure and I get to see all stylsheet and js working back.
 
 # Credit and media
 The content of articles has been copied from the online official interviews article provided by the corresponding magazines
