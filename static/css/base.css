@@ -45,9 +45,10 @@ i.fas.fa-chevron-left:hover {
 
 .text-blog {
     color: #e63b3d;
+    font-weight: 700;
 }
 
-i.fas.fa-blog.nav-icon.text-blog .icon-caroussel{
+.icon-caroussel{
     font-size: 40px;
 }
 
