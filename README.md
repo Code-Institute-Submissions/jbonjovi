@@ -198,9 +198,7 @@ http://ami.responsivedesign.is/
 Whenever an issue arised ie an error not clear to resolved I would add a print statement to parts of my codes which became very handy as to point to what went wrong.
 
 **W3C CSS Validator**
-2 errors popped: .dropdown-menu: Value Error : background-color none is not a background-color value : none and none is not a background-clip value : none
-which I removed from the original file.
-I have chosen to ignore the warning as it is relating to the color for the allauth section.
+no error
 
 **W3C HTML Validator**
 Most of the errors displayed are from the use of the jinja templates and I have been advised to ignore them
