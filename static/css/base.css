@@ -581,7 +581,9 @@ a.post-title:hover{
         margin-bottom: 0;
     }
 
-    
+    h2.text-center.bj-heading {
+    margin-top: 10px;
+}   
 
     .card-deck {
     display: inline-block;
