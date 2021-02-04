@@ -1,6 +1,8 @@
-<img src="media/homepage.iam.png" alt="homepage">
-<img src="media/music.iam.png" alt="music">
-<img src="media/Boutique.iam.png" alt="Boutique">
+<img src="media/responsive-1.png" alt="homepage">
+<img src="media/responsive-2.png" alt="shop">
+<img src="media/responsive-3.png" alt="bonjovi">
+<img src="media/responsive-4.png" alt="contact">
+<img src="media/responsive-5.png" alt="blog">
 
 ## Bonjovi
 This site is dedicated to the Band's fans and offers them the ability to access their music, most updated articles
@@ -21,25 +23,27 @@ offers a link to their profile and the option to logout, and if the user is a su
 to either add a new product, edit, update or delete an existing one.
 --view of their current shopping bag.
 
-The menu is as follow:
+# The menu is as follow:
+The navigation is very easy
+--A new feature has been added to the site: a Blog 
 --Home -- the logo also brings you back to the homepage
 --JBJ Boutique -- offers a dropdown by category
---Tour -- gives information on the band next tour appereances
---Music -- provides the user with a large selection of the band's albums and ability to either buy or stream them
+--bonjovi -- gives information on the band next tour appereances
+--Contact us -- provides the user with a large selection of the band's albums and ability to either buy or stream them
 
-Toast messages have been put in place to accompany the users throughout their interactions in the site, whether it is when registering
-purchasing a product, logging in, logging out...
 
-The homepage is a generic page where the user can get familiar with the jbj experience, which are products subscriptions to the band's3
-inside stories. it also gives the user a view of the latest album and then can also read the latest articles written.
+As a user I want to surf this site and be able to get back to the homepage easily. Both the Home menu item and the logo brings me back to the homepage.
 
+As a user if I want to purchase some merchandise I would like a simple navigation through the menu to the shop. 
+The menu currently offers a one click to all items or provides a select by merchandise category option.
 The JBJ Boutique is the ecommerce part of the site where users/visitors can see all the items displayed by categories.
 Upon surfing on this page, the users can sort the products as well as make a search to find their favourite items.
 
-The Tour page will send the users to the upcoming tours events the bands organised, currently none is set.
+As a user by clicking on the Bonjovi page I would like to see what the band is about, if any tour is scheduled and if there is some news on their coming tour.
+As this is a band, it is important to have the option to listen to their album. as a user I would like to navigate through the bonjovi page and 
+have the album displayed and when choosing to buy or stream not only being redirected to a different page but the page opens up in a new window.
 
-The Music page gives the users the ability to chcek every album and presented in a flip card, the album title and tracks as well as an option
-that directs them to the official channels to buy or stream online their songs.
+As a user I would want to navigate to the Contact page to be able to gte in touch and send a mail to the band whether to request info, check on the tour dates or enquire about a specific merchandise.
 
 ## User stories
 As a user I would like to feel close to the band, I would want a site that is easy to use, easy to navigate and gets me to sign up
@@ -72,14 +76,19 @@ Please find my wireframes in the media folder under New Project.pdf
 ## Features
 **Branded design and easy navigation:** the jbj boutique is easy to navigate to, the products are displayed in cards where all details ie price are
 available, when a user click on the product image, it brings them to an individual product detail page they can select the size when appropriate, the quantities and 
-more importantly they can purchase.
+more importantly they can add it to their bag. A choice of size is given to any apparel products and the quantity can also be selected
 **User-focused order functionality:** Once the user select the product he/she wants to purchase and they want to complete their order, by clicking on secure checkout on either the toast message 
 or the actual checkout page, it directs them to a secure checkout where they are asked to fill up their order details ie name, email, address before submitting their card details.
 **Social media:** as we are in difficult time it is important to give the users the ability to stay connected with the band in all means especially through their active social media platforms.
 **Music buying and streaming:** With all the legality involved around music, it is important to provide the user with the right channels.
+**Blog:** I have created a blog that shows posts with images, only a designated superuser can add, update or delete the posts
+**Contact us:**By inputting the name, emails and writing a message every user can get in touch with the site admin.
+**Login in with Facebook:**Option to login with the social media platform Facebook is available when trying to Login
+**register:**the menu offers a register option with authentication: email confirmation.
+**profile:**user profile is set up and running if a user wants its details to be saved onto the db. Once revisiting the ;profile page, the user is 
+offered with an order history, any profile can be updated at any time.
 
 ## Features for the future
-**Social media integration:** giving the ability to user to sign up with facebook 
 **Youtube livestream:** with what is happening today, most gatherings such as concerts have been cancelled, a user will definetly enjoy the band's future live streaming online through youtube
 **Tour dates:** as soon as the concerts are back on, add the ability to purchase/book tickets online
 
@@ -97,7 +106,7 @@ or the actual checkout page, it directs them to a secure checkout where they are
 
 ## tools used
 **Wireframes** to create the wireframes
-**W£C HTML Validator** to proof html  files
+**W£C HTML Validator** to proof html files
 **PEP8 validator** to proof python files
 **Autoprefixed** to check css code
 
@@ -162,26 +171,27 @@ I have manually tested all screen resolutions using the inspect on chrome browse
 
 Testing product management:
 I have logged in as a superuser and filled the add products fields before adding the product with an image first then without an image and
-the none image has automatically beiing picked which is a success.
+the none image has automatically being picked which is a success.
 going onto the same added product, as a superuser I was able to modify the description and update it successfully. 
 Also when I put a wrong amount in the price tab, a toast message appeared asking me to review it. Which is working.
 Then I decided to delete the newly added product and it got processed with no issue.
 
 Testing register:
-I had amended the settings line too long statement in the allauth security questions and it broke my registration capabilities
-so after fixing it I surfed and registered adding a new email and the sign in succeeded
+Once register the required details, a confirmation email is sent, as soon as clicked I am able to sign in.
 Upon sign in I was able to go to the boutique add products to my shopping cart and checkout using the generic credit card.
 a toast message accompanied me all the way: when adding a product, when checking out, I also was able to set a profile
 and once done when I logged back in the profile held a history of my previous orders.
 
 Testing links:
-every link opens in a new page
+every link opens, every social links open in a new page
 
 Testing sign in:
 Tried to sign in as a super user and a random user and both are successful
 
 Testing link on the album tracks:
 The link open in a new page on all screen size
+
+Testing the site responsiveness:
 http://ami.responsivedesign.is/
 
 # Automated testing
@@ -193,7 +203,6 @@ which I removed from the original file.
 I have chosen to ignore the warning as it is relating to the color for the allauth section.
 
 **W3C HTML Validator**
-Warning: Empty heading in my loading spinner I have decided to ignore in my checkout.html
 Most of the errors displayed are from the use of the jinja templates and I have been advised to ignore them
 
 **PEP8**

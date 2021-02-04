@@ -562,7 +562,7 @@ a.post-title:hover{
     }
     }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+/* on mobile */
 @media(max-width: 991px) {
     .header-container-fluid {
         padding-top: 116px;
@@ -599,6 +599,10 @@ a.post-title:hover{
     margin-top: 10px;
     margin-bottom: 10px;
     height: 16vh;
+}
+
+    .section-heading, .col-lg-6.email-input {
+    margin-top: 10px;
 }
 
 }
