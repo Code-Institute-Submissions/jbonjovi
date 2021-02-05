@@ -191,6 +191,10 @@ Tried to sign in as a super user and a random user and both are successful
 Testing link on the album tracks:
 The link open in a new page on all screen size
 
+Testing social media login:
+I have set up the facebook login using my personal login details. Once tested it did work however more redirect urls need to be
+added in the facebook developper app. the link on the heroku app and github will take you to a facebook login page.
+
 Testing the site responsiveness:
 http://ami.responsivedesign.is/
 
