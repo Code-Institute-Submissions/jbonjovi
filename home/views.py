@@ -24,10 +24,10 @@ def contact(request):
 
         # to send a mail
         send_mail(
-            'This message is from' + message_name,  # this is the subject
-            message,  # the message
-            message_mail,  # the from email
-            ['jihane.azim@gmail.com']  # the To email
+            'This message is from' + message_name,
+            message,
+            message_mail,
+            ['jihane.azim@gmail.com']
         )
 
         return render(request, 'home/contact.html',
